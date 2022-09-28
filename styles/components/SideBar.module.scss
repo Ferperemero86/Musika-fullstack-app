@@ -1,0 +1,30 @@
+.sidebar {
+  width: 300px;
+  height: 80vh;
+  background: #000;
+  position: absolute;
+  top: 0;
+}
+
+.content {
+  margin-left: 0;
+
+  ul {
+    padding-top: 100px;
+    padding-left: 0;
+
+    li {
+      padding: 15px 0 15px 50px;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.separator {
+  width: 90%;
+  margin: 15px auto;
+}

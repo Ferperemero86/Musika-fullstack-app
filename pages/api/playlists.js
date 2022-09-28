@@ -7,8 +7,6 @@ const handler = nextConnect();
 const prisma = new PrismaClient();
 
 handler.use(auth).get(async (req, res) => {
-  console.log("usuario", req.isAuthenticated());
-
   if (!req.isAuthenticated()) return res.status(401).json({});
 
   const { email } = req.user;
@@ -20,7 +18,6 @@ handler.use(auth).get(async (req, res) => {
       },
     })
     .then((user) => {
-      console.log("USER", user);
       return res.json({ user });
     })
     .catch((err) => err);

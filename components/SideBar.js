@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Link from "next/link";
+import { UserContext } from "../contexts/UserContext";
 
 import styles from "../styles/components/SideBar.module.scss";
 
 export default function SideBar() {
+  const { user } = useContext(UserContext);
+  const userLoggedIn = user.user;
+
+  if (!userLoggedIn) return null;
   return (
     <div className={styles.sidebar}>
       <div className={styles.content}>

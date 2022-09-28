@@ -8,8 +8,6 @@ export default function Navbar(props) {
   //const [userLoggedIn, setUserLoggedIn] = useState(false);
   const { user, setUser } = useContext(UserContext);
 
-  console.log("VALUEee", user);
-
   async function handleLogout() {
     await fetch("/api/logout");
     setUser(() => false);

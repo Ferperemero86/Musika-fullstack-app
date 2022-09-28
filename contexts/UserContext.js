@@ -1,3 +1,4 @@
+import Router from "next/router";
 import { createContext, useEffect, useState } from "react";
 
 export const UserContext = createContext(null);
@@ -12,8 +13,12 @@ export function Usercheck({ children }) {
     });
 
     const auth = await res.json();
-    console.log("auth", auth);
+
     setUser(auth);
+    console.log("USER IN AUTH", user);
+    if (!user) {
+      Router.push("/login");
+    }
   }, []);
 
   return (

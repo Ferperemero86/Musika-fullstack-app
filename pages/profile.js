@@ -7,7 +7,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     if (!user) {
-      Router.push("/");
+      Router.push("/login");
     }
   });
   return (

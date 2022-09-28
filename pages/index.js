@@ -3,6 +3,7 @@ import styles from "../styles/pages/Home.module.scss";
 import { fetcher } from "../authentication/hooks";
 import useSWR from "swr";
 import { UserContext } from "../contexts/UserContext";
+import Router from "next/router";
 
 export default function HomePage({ value }) {
   return (

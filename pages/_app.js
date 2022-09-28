@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Usercheck>
         <Navbar />
+        <SideBar />
         <main>
           <div className="container">
             <Component {...pageProps} />
